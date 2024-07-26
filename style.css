@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.calendar-header {
+    grid-column: span 7;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.calendar-day {
+    background: #fff;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    min-height: 80px;
+}
+
+.calendar-day.empty {
+    background: #f9f9f9;
+}
+
+.event {
+    background: #e7e7e7;
+    margin-top: 5px;
+    padding: 2px;
+    font-size: 0.8em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.section {
+    background: #fff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input[type="text"], input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #555;
+}
+
+/* 在現有的 CSS 末尾添加以下內容 */
+
+.event {
+    position: relative;
+    cursor: pointer;
+}
+
+.delete-button {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 0.8em;
+    padding: 2px 5px;
+}
+
+.event:hover .delete-button {
+    display: block;
+}
